@@ -122,7 +122,7 @@ def search():
             else:
                 print("输入有误，重新输入\n")
                 search()
-            with open("student_information.txt","r") as file:
+            with open("student_information.txt", "r") as file:
                 student = file.readlines()
                 for list in student:
                     d = dict(eval(list))
@@ -234,7 +234,7 @@ def sort():
     show()
     new = []
     if os.path.exists("student_information.txt"):
-        with open("student_information.txt","r") as r_file:
+        with open("student_information.txt", "r") as r_file:
             student_old = r_file.readlines()
         for lisr in student_old:
             d = dict(eval(lisr))
@@ -269,7 +269,7 @@ def sort():
 def total():
     print("统计学生总数\n")
     if os.path.exists("student_information.txt"):
-        with open("student_information.txt","r") as r_file:
+        with open("student_information.txt", "r") as r_file:
             student_old = r_file.readlines()
             if student_old :
                 print("一共有%d名学生！"%len(student_old))
